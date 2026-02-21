@@ -116,23 +116,26 @@ jobs:
     - name: Trivy scan users-service
       uses: aquasecurity/trivy-action@0.20.0
       with:
-        image-ref: users-service
-        severity: HIGH
-        exit-code: 1
+        image-ref: 'users-service'
+        scan-type: 'image'
+        severity: 'HIGH'
+        exit-code: '1'
 
     - name: Trivy scan academic-service
       uses: aquasecurity/trivy-action@0.20.0
       with:
-        image-ref: academic-service
-        severity: CRITICAL
-        exit-code: 1
+        image-ref: 'academic-service'
+        scan-type: 'image'
+        severity: 'CRITICAL'
+        exit-code: '1'
 
     - name: Trivy scan api-gateway
       uses: aquasecurity/trivy-action@0.20.0
       with:
-        image-ref: api-gateway
-        severity: CRITICAL
-        exit-code: 1
+        image-ref: 'api-gateway'
+        scan-type: 'image'
+        severity: 'CRITICAL'
+        exit-code: '1'
 
     # =========================
     # 8. Smoke test
